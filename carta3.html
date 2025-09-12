@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Primer Mes, Yuriko 💜</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 40px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .typing {
+      font-size: 1.5em;
+      margin: 30px auto;
+      width: 80%;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(40, end), blink .8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 80%; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: white }
+    }
+
+    #frases {
+      font-size: 1.3em;
+      margin-top: 20px;
+      height: 50px;
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 30px;
+      background: #7b2ff7;
+      color: white;
+      font-size: 1.3em;
+      cursor: pointer;
+      transition: transform .2s, background .3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    button:hover {
+      background: #f107a3;
+      transform: scale(1.1);
+    }
+
+    #mensajeCompleto {
+      display: none;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 30px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 20px;
+      font-size: 1.3em;
+      line-height: 1.6em;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    #mensajeCompleto.mostrar {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #listaAmor {
+      display: none;
+      margin: 40px auto;
+      max-width: 700px;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      text-align: left;
+      font-size: 1.2em;
+      line-height: 1.8em;
+    }
+    #listaAmor ul {
+      list-style: "💜 ";
+      padding-left: 20px;
+    }
+
+    /* Corazones flotando */
+    .corazon {
+      position: absolute;
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      animation: flotar 10s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes flotar {
+      from { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+      to { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>💜 Feliz Primer Mes, Yuriko 💜</h1>
+  <div class="typing">Este primer mes contigo ha sido increíble...</div>
+  <div id="frases"></div>
+  <button onclick="mostrarCarta()">Ver mi mensaje para ti 💌</button>
+  
+  <div id="mensajeCompleto">
+    <p>Mi querida Yuri,</p>
+    <p>
+      Hoy cumplimos un mes juntos y quiero que sepas lo feliz que me hace tenerte en mi vida.  
+      Cada día a tu lado me enseña lo bonito que es compartir, reír y soñar contigo.  
+    </p>
+    <p>
+      Eres especial, única y maravillosa. No sabes cuánto agradezco poder llamarte mi novia. 
+      Un mes puede parecer poco, pero para mí ha sido suficiente para darme cuenta  
+      de lo mucho que significas para mí.
+    </p>
+    <p>
+        Yuri, cada día contigo me doy cuenta de lo importante que eres en mi vida. No sé si siempre logro demostrarte cuánto te quiero, pero quiero que sepas que mi cariño por ti es real y sincero. No busco que cambies nada de ti, porque me encantas tal como eres, con todo lo que te hace única.
+    </p>
+    <p>
+        A veces me siento pequeño frente a lo mucho que significas para mí, pero eso solo me motiva a dar lo mejor de mí mismo para ti. Lo único que quiero es que seas feliz y que sientas lo especial que eres para mí.
+    </p>
+    <p>
+      Espero que sigamos creando recuerdos, y compartiendo momentos.  
+      Porque si algo tengo claro, es que quiero seguir a tu lado, on todo lo que soy, con mis fallos y mis virtudes, quiero seguir caminando contigo. 💜 💕  
+    </p>
+    <p>Siempre tuyo: ,<br> DavidBD 💜</p>
+  </div>
+
+  <div id="listaAmor">
+    <h2>10 cosas que amo de ti 💜</h2>
+    <ul>
+      <li>Tu sonrisa que me alegra el día.</li>
+      <li>La forma en que gritas en los juegos.</li>
+      <li>Tu manera de contarme las cosas que te gustan.</li>
+      <li>Tu dulzura y ternura.</li>
+      <li>Cómo me muestras cosas nuevas.</li>
+      <li>Tu forma de ver la vida con positivismo.</li>
+      <li>Que siempre encuentras cómo sacarme una sonrisa.</li>
+      <li>Tu inteligencia y lo mucho que admiro de ti.</li>
+      <li>Que eres demasiado tierna.</li>
+      <li>Simplemente, que eres tú. 💜</li>
+    </ul>
+  </div>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script>
+    // Frases que cambian
+    const frases = [
+      "Eres mi felicidad diaria 🌸",
+      "Gracias por existir 💜",
+      "Te quiero con todo mi corazón 💖",
+      "Un mes contigo es solo el comienzo ✨",
+      "Siempre estaré para ti 💕"
+    ];
+    let index = 0;
+    const frasesDiv = document.getElementById("frases");
+    setInterval(() => {
+      frasesDiv.textContent = frases[index];
+      index = (index + 1) % frases.length;
+    }, 3000);
+
+    // Mostrar carta y lista
+    function mostrarCarta() {
+      const carta = document.getElementById("mensajeCompleto");
+      carta.classList.add("mostrar");
+      document.getElementById("listaAmor").style.display = "block";
+      document.getElementById("musica").play();
+    }
+
+    // Corazones flotando
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.fontSize = Math.random() * 20 + 15 + "px";
+      corazon.textContent = "❤";
+      document.body.appendChild(corazon);
+
+      setTimeout(() => {
+        corazon.remove();
+      }, 10000);
+    }
+    setInterval(crearCorazon, 600);
+  </script>
+</body>
+</html>
